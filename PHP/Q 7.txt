@@ -1,0 +1,19 @@
+Create a form which takes the name of the user as input and prints a greeting in the format
+given below and if the user submits the form with the name field blank, it prints an
+appropriate error message.
+
+Hello, Welcome to Everyone!
+Have a nice day!!
+
+
+<form method="post">
+    Name: <input name="name">
+    <input type="submit">
+</form>
+
+<?php
+if($_POST){
+    echo empty($_POST['name']) ? "<p style='color:red;'>Enter your name.</p>"
+         : "Hello {$_POST['name']}, Welcome to Everyone!<br>Have a nice day!!";
+}
+?>
