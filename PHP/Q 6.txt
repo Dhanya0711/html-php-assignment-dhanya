@@ -1,0 +1,30 @@
+Interpret the method to pass the information between pages in PHP with an example.
+
+
+Passing Information Between Pages in PHP
+
+GET Method – Sends data via URL (visible).
+page1.php
+
+php
+
+<a href="page2.php?name=Dhanya&age=21">Go</a>
+page2.php
+
+php
+
+<?php echo $_GET['name']." ".$_GET['age']; ?>
+POST Method – Sends data in request body (hidden).
+page1.php
+
+php
+
+<form action="page2.php" method="post">
+<input name="name"><input name="age"><button>Go</button>
+</form>
+page2.php
+
+php
+
+<?php echo $_POST['name']." ".$_POST['age']; ?>
+GET → Visible in URL. POST → Hidden, safer for sensitive data.
