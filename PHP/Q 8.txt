@@ -1,0 +1,15 @@
+A customer visits a shop to buy a soft drink; he has two options:
+Drink A cost is Rs.25 and the size of the bottle is 11.
+Drink B cost is Rs.23 and its size of the bottle is 9.
+Which drink should he choose to save money? Solve this problem using function deal ( ).
+
+<?php
+function deal($cA,$sA,$cB,$sB){
+    echo ($cA/$sA < $cB/$sB) ? "Choose Drink A" :
+         (($cB/$sB < $cA/$sA) ? "Choose Drink B" : "Both same");
+}
+deal(25,11,23,9);
+?>
+Output:
+
+Choose Drink A
